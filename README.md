@@ -26,7 +26,19 @@ npm run migration:run
 npm run start:dev
 ```
 
-3. Health check:
+3. Seed sample data (optional, idempotent):
+
+```bash
+npm run seed
+```
+
+Seed logins (password `password123`):
+
+- `admin@example.com` (ADMIN)
+- `engineer@example.com` (ENGINEER)
+- `viewer@example.com` (VIEWER)
+
+4. Health check:
 
 ```bash
 curl http://localhost:3000/health
@@ -76,6 +88,7 @@ npm run build
 npm run verify          # typecheck + test + build
 npm run migration:run
 npm run migration:revert
+npm run seed
 ```
 
 ## Docker expectations (implement yourself)
